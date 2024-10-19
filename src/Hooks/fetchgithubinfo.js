@@ -1,3 +1,9 @@
+// we created a custom hook to fetch data from the github api
+//used 3 states to manage the data, loading and error states
+//then created a fetch user function to fetch data from the api
+//finally returned all states and the fetch user function in an object
+
+
 import { useState } from 'react';
 
 
@@ -7,15 +13,12 @@ const fetchgithubinfo = () => {
     const[loading, setLoading] = useState(false);
     const[error, setError] = useState(null);
 
-    //create fetch user function
-    //return all states + fetch user fnc in an object
-
     const fetchuser = async (username) => {
         setLoading(true);
         setError(null);
 
         try{ 
-// here to logic to fetch data from api 
+
             const response = await fetch(`https://api.github.com/users/${username}`);
           
             if (!response.ok) {

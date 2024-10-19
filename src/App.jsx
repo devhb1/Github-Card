@@ -1,10 +1,11 @@
 import React from 'react'
-import UserProfile from './components/UserProfile'
+import Home from './pages/Home'
+
 
 function App() {
   return (
     <div>
-     <UserProfile />
+      <Home />
     </div>
   )
 }
